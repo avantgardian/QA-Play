@@ -46,6 +46,31 @@
                 <h1 class="title">AJAX / API Calls</h1>
                 <p class="subtitle">Simulate network requests with varying delays and responses.</p>
 
+                <article class="message is-info icon-text-message">
+                    <div class="message-header">
+                        <p>
+                            <span class="icon mr-2">
+                                <i class="fas fa-info-circle"></i>
+                            </span>
+                            Testing Scenarios
+                        </p>
+                    </div>
+                    <div class="message-body">
+                        <div class="content">
+                            <p>Here are some test cases to automate:</p>
+                            <ul>
+                                <li><strong>Verify 200 OK:</strong> Click "Get User" and verify the status code is 200
+                                    and JSON body contains "name".</li>
+                                <li><strong>Verify 404 Error:</strong> Click "Get 404" and verify the status code is
+                                    404.</li>
+                                <li><strong>Wait for Response:</strong> Click "Trigger Slow Request", wait explicitly
+                                    for 5 seconds (or until response), and verify the "Slow response received" content.
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </article>
+
                 <div class="columns">
                     <div class="column is-6">
                         <div class="box">

@@ -36,6 +36,27 @@
                 <h1 class="title">Dynamic ID</h1>
                 <p class="subtitle">The ID of the button below changes on every page reload.</p>
 
+                <article class="message is-info icon-text-message">
+                    <div class="message-header">
+                        <p>
+                            <span class="icon mr-2">
+                                <i class="fas fa-info-circle"></i>
+                            </span>
+                            Testing Scenarios
+                        </p>
+                    </div>
+                    <div class="message-body">
+                        <div class="content">
+                            <p>Here are some test cases to automate:</p>
+                            <ul>
+                                <li><strong>Ignore Dynamic ID:</strong> The button's ID changes on every reload. Do NOT use <code>#dynamic-btn-placeholder</code> or similar generated IDs.</li>
+                                <li><strong>Use Resilient Locators:</strong> Locate the button using stable attributes like CSS class, text content, or relative XPath.</li>
+                                <li><strong>Verify Interaction:</strong> Click the button and ensure the "Button Clicked!" text appears.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </article>
+
                 <div class="columns is-centered">
                     <div class="column is-6">
                         <div class="box has-text-centered">
