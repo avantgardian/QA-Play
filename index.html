@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QA Automation Playground</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <nav class="navbar is-dark" role="navigation" aria-label="main navigation">
+        <div class="container">
+            <div class="navbar-brand">
+                <a class="navbar-item" href="index.html">
+                    <span class="icon is-large">
+                        <i class="fas fa-robot fa-lg"></i>
+                    </span>
+                    <span class="has-text-weight-bold is-size-4 ml-2">QAPlay</span>
+                </a>
+
+                <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false"
+                    data-target="navbarBasicExample">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                </a>
+            </div>
+
+            <div id="navbarBasicExample" class="navbar-menu">
+                <div class="navbar-start">
+                    <a class="navbar-item is-active" href="index.html">
+                        Home
+                    </a>
+                </div>
+
+                <div class="navbar-end">
+                    <div class="navbar-item">
+                        <div class="buttons">
+                            <a class="button is-primary" href="https://github.com/avantgardian/QAPlay" target="_blank">
+                                <span class="icon">
+                                    <i class="fab fa-github"></i>
+                                </span>
+                                <span>GitHub</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="content-wrapper">
+        <section class="hero is-info is-medium">
+            <div class="hero-body">
+                <div class="container has-text-centered">
+                    <p class="title">
+                        QA Automation Playground
+                    </p>
+                    <p class="subtitle">
+                        A playground for practicing test automation with Selenium, Playwright, Cypress, and more.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="columns is-multiline">
+                    <!-- Scenario Cards be injected here or hardcoded -->
+
+                    <!-- Login -->
+                    <div class="column is-4">
+                        <div class="card">
+                            <header class="card-header">
+                                <p class="card-header-title">
+                                    <span class="icon mr-2 has-text-info"><i class="fas fa-sign-in-alt"></i></span>
+                                    Login Form
+                                </p>
+                            </header>
+                            <div class="card-content">
+                                <div class="content">
+                                    Simulate a user login process. Test input fields, validation, and success/error
+                                    states.
+                                </div>
+                            </div>
+                            <footer class="card-footer">
+                                <a href="pages/login.html" class="card-footer-item">Go to Scenario</a>
+                            </footer>
+                        </div>
+                    </div>
+
+                    <!-- Registration -->
+                    <div class="column is-4">
+                        <div class="card">
+                            <header class="card-header">
+                                <p class="card-header-title">
+                                    <span class="icon mr-2 has-text-success"><i class="fas fa-user-plus"></i></span>
+                                    Registration Form
+                                </p>
+                            </header>
+                            <div class="card-content">
+                                <div class="content">
+                                    Practice with complex forms including checkboxes, date pickers, and validation
+                                    logic.
+                                </div>
+                            </div>
+                            <footer class="card-footer">
+                                <a href="pages/register.html" class="card-footer-item">Go to Scenario</a>
+                            </footer>
+                        </div>
+                    </div>
+
+                    <!-- Tables -->
+                    <div class="column is-4">
+                        <div class="card">
+                            <header class="card-header">
+                                <p class="card-header-title">
+                                    <span class="icon mr-2 has-text-warning"><i class="fas fa-table"></i></span>
+                                    Web Table
+                                </p>
+                            </header>
+                            <div class="card-content">
+                                <div class="content">
+                                    Interact with dynamic tables. Test sorting, searching, pagination, and data
+                                    extraction.
+                                </div>
+                            </div>
+                            <footer class="card-footer">
+                                <a href="pages/table.html" class="card-footer-item">Go to Scenario</a>
+                            </footer>
+                        </div>
+                    </div>
+
+                    <!-- File Upload -->
+                    <div class="column is-4">
+                        <div class="card">
+                            <header class="card-header">
+                                <p class="card-header-title">
+                                    <span class="icon mr-2 has-text-danger"><i
+                                            class="fas fa-cloud-upload-alt"></i></span>
+                                    File Upload
+                                </p>
+                            </header>
+                            <div class="card-content">
+                                <div class="content">
+                                    Test file upload functionality using standard HTML input and drag-and-drop zones.
+                                </div>
+                            </div>
+                            <footer class="card-footer">
+                                <a href="pages/upload.html" class="card-footer-item">Go to Scenario</a>
+                            </footer>
+                        </div>
+                    </div>
+
+                    <!-- Drag and Drop -->
+                    <div class="column is-4">
+                        <div class="card">
+                            <header class="card-header">
+                                <p class="card-header-title">
+                                    <span class="icon mr-2 has-text-primary"><i class="fas fa-arrows-alt"></i></span>
+                                    Drag & Drop
+                                </p>
+                            </header>
+                            <div class="card-content">
+                                <div class="content">
+                                    Handle drag and drop events. Move elements between containers.
+                                </div>
+                            </div>
+                            <footer class="card-footer">
+                                <a href="pages/drag_drop.html" class="card-footer-item">Go to Scenario</a>
+                            </footer>
+                        </div>
+                    </div>
+
+                    <!-- Alerts -->
+                    <div class="column is-4">
+                        <div class="card">
+                            <header class="card-header">
+                                <p class="card-header-title">
+                                    <span class="icon mr-2 has-text-info"><i
+                                            class="fas fa-exclamation-triangle"></i></span>
+                                    Alerts & Modals
+                                </p>
+                            </header>
+                            <div class="card-content">
+                                <div class="content">
+                                    Interact with native JS alerts, confirms, prompts, and Bootstrap/Bulma modals.
+                                </div>
+                            </div>
+                            <footer class="card-footer">
+                                <a href="pages/alerts.html" class="card-footer-item">Go to Scenario</a>
+                            </footer>
+                        </div>
+                    </div>
+
+                    <!-- iFrames -->
+                    <div class="column is-4">
+                        <div class="card">
+                            <header class="card-header">
+                                <p class="card-header-title">
+                                    <span class="icon mr-2 has-text-grey"><i class="fas fa-window-maximize"></i></span>
+                                    iFrames
+                                </p>
+                            </header>
+                            <div class="card-content">
+                                <div class="content">
+                                    Switch contexts to interact with elements inside iFrames.
+                                </div>
+                            </div>
+                            <footer class="card-footer">
+                                <a href="pages/iframes.html" class="card-footer-item">Go to Scenario</a>
+                            </footer>
+                        </div>
+                    </div>
+
+                    <!-- Mouse Actions -->
+                    <div class="column is-4">
+                        <div class="card">
+                            <header class="card-header">
+                                <p class="card-header-title">
+                                    <span class="icon mr-2 has-text-link"><i class="fas fa-mouse-pointer"></i></span>
+                                    Mouse Actions
+                                </p>
+                            </header>
+                            <div class="card-content">
+                                <div class="content">
+                                    Test hover effects, context clicks, double clicks, and tooltips.
+                                </div>
+                            </div>
+                            <footer class="card-footer">
+                                <a href="pages/mouse.html" class="card-footer-item">Go to Scenario</a>
+                            </footer>
+                        </div>
+                    </div>
+
+                    <!-- Shadow DOM -->
+                    <div class="column is-4">
+                        <div class="card">
+                            <header class="card-header">
+                                <p class="card-header-title">
+                                    <span class="icon mr-2 has-text-dark"><i class="fas fa-ghost"></i></span>
+                                    Shadow DOM
+                                </p>
+                            </header>
+                            <div class="card-content">
+                                <div class="content">
+                                    Find and interact with elements encapsulated within Shadow DOMs.
+                                </div>
+                            </div>
+                            <footer class="card-footer">
+                                <a href="pages/shadow.html" class="card-footer-item">Go to Scenario</a>
+                            </footer>
+                        </div>
+                    </div>
+
+                    <!-- API Calls -->
+                    <div class="column is-4">
+                        <div class="card">
+                            <header class="card-header">
+                                <p class="card-header-title">
+                                    <span class="icon mr-2 has-text-warning"><i class="fas fa-server"></i></span>
+                                    AJAX / API
+                                </p>
+                            </header>
+                            <div class="card-content">
+                                <div class="content">
+                                    Simulate API calls. Handle delays, 404s, and loading states.
+                                </div>
+                            </div>
+                            <footer class="card-footer">
+                                <a href="pages/api.html" class="card-footer-item">Go to Scenario</a>
+                            </footer>
+                        </div>
+                    </div>
+
+
+
+                    <!-- Validation -->
+                    <div class="column is-4">
+                        <div class="card">
+                            <header class="card-header">
+                                <p class="card-header-title">
+                                    <span class="icon mr-2 has-text-danger"><i class="fas fa-check-circle"></i></span>
+                                    Form Validation
+                                </p>
+                            </header>
+                            <div class="card-content">
+                                <div class="content">
+                                    Test input constraints, max length, and regex patterns.
+                                </div>
+                            </div>
+                            <footer class="card-footer">
+                                <a href="pages/validation.html" class="card-footer-item">Go to Scenario</a>
+                            </footer>
+                        </div>
+                    </div>
+
+                    <!-- Progress Bar -->
+                    <div class="column is-4">
+                        <div class="card">
+                            <header class="card-header">
+                                <p class="card-header-title">
+                                    <span class="icon mr-2 has-text-info"><i class="fas fa-spinner"></i></span>
+                                    Progress Bar
+                                </p>
+                            </header>
+                            <div class="card-content">
+                                <div class="content">
+                                    Practice Explicit Waits. Wait for the progress bar to reach 100%.
+                                </div>
+                            </div>
+                            <footer class="card-footer">
+                                <a href="pages/progressbar.html" class="card-footer-item">Go to Scenario</a>
+                            </footer>
+                        </div>
+                    </div>
+
+                    <!-- Scroll -->
+                    <div class="column is-4">
+                        <div class="card">
+                            <header class="card-header">
+                                <p class="card-header-title">
+                                    <span class="icon mr-2 has-text-primary"><i class="fas fa-scroll"></i></span>
+                                    Scroll & Lazy Load
+                                </p>
+                            </header>
+                            <div class="card-content">
+                                <div class="content">
+                                    Scroll to reveal elements. Handle lazy loading content.
+                                </div>
+                            </div>
+                            <footer class="card-footer">
+                                <a href="pages/scroll.html" class="card-footer-item">Go to Scenario</a>
+                            </footer>
+                        </div>
+                    </div>
+
+                    <!-- Dynamic ID -->
+                    <div class="column is-4">
+                        <div class="card">
+                            <header class="card-header">
+                                <p class="card-header-title">
+                                    <span class="icon mr-2 has-text-dark"><i class="fas fa-id-card"></i></span>
+                                    Dynamic ID
+                                </p>
+                            </header>
+                            <div class="card-content">
+                                <div class="content">
+                                    Button IDs change on every reload. Don't rely on ID selectors!
+                                </div>
+                            </div>
+                            <footer class="card-footer">
+                                <a href="pages/dynamic_id.html" class="card-footer-item">Go to Scenario</a>
+                            </footer>
+                        </div>
+                    </div>
+
+                    <!-- Geolocation -->
+                    <div class="column is-4">
+                        <div class="card">
+                            <header class="card-header">
+                                <p class="card-header-title">
+                                    <span class="icon mr-2 has-text-link"><i class="fas fa-globe-americas"></i></span>
+                                    Geolocation
+                                </p>
+                            </header>
+                            <div class="card-content">
+                                <div class="content">
+                                    Test browser geolocation handling and permission mocks.
+                                </div>
+                            </div>
+                            <footer class="card-footer">
+                                <a href="pages/geolocation.html" class="card-footer-item">Go to Scenario</a>
+                            </footer>
+                        </div>
+                    </div>
+
+                    <!-- Keyboard & Clipboard -->
+                    <div class="column is-4">
+                        <div class="card">
+                            <header class="card-header">
+                                <p class="card-header-title">
+                                    <span class="icon mr-2 has-text-warning"><i class="fas fa-keyboard"></i></span>
+                                    Keyboard & Clipboard
+                                </p>
+                            </header>
+                            <div class="card-content">
+                                <div class="content">
+                                    Shortcuts (Ctrl+K) and Clipboard API interaction.
+                                </div>
+                            </div>
+                            <footer class="card-footer">
+                                <a href="pages/keyboard.html" class="card-footer-item">Go to Scenario</a>
+                            </footer>
+                        </div>
+                    </div>
+
+                    <!-- New Tab -->
+                    <div class="column is-4">
+                        <div class="card">
+                            <header class="card-header">
+                                <p class="card-header-title">
+                                    <span class="icon mr-2 has-text-danger"><i class="fas fa-window-restore"></i></span>
+                                    New Tab / Window
+                                </p>
+                            </header>
+                            <div class="card-content">
+                                <div class="content">
+                                    Handle multiple browser tabs and context switching.
+                                </div>
+                            </div>
+                            <footer class="card-footer">
+                                <a href="pages/windows.html" class="card-footer-item">Go to Scenario</a>
+                            </footer>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer class="footer has-background-dark has-text-white">
+        <div class="content has-text-centered">
+            <p>
+                <strong>QAPlay</strong> by Avantgardian. The source code is licensed
+                <a href="http://opensource.org/licenses/mit-license.php">MIT</a>.
+            </p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

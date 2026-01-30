@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Calls - QA Automation Playground</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .json-block {
+            background-color: #282c34;
+            color: #abb2bf;
+            padding: 1rem;
+            border-radius: 4px;
+            font-family: monospace;
+            min-height: 100px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar is-dark" role="navigation" aria-label="main navigation">
+        <div class="container">
+            <div class="navbar-brand">
+                <a class="navbar-item" href="../index.html">
+                    <span class="icon is-large">
+                        <i class="fas fa-robot fa-lg"></i>
+                    </span>
+                    <span class="has-text-weight-bold is-size-4 ml-2">QAPlay</span>
+                </a>
+            </div>
+            <div class="navbar-menu">
+                <div class="navbar-end">
+                    <a class="navbar-item" href="../index.html">Home</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="content-wrapper">
+        <section class="section">
+            <div class="container">
+                <h1 class="title">AJAX / API Calls</h1>
+                <p class="subtitle">Simulate network requests with varying delays and responses.</p>
+
+                <div class="columns">
+                    <div class="column is-6">
+                        <div class="box">
+                            <h3 class="title is-4">Mock Requests</h3>
+                            <div class="buttons">
+                                <button class="button is-info" id="getUserBtn">
+                                    <span class="icon is-small"><i class="fas fa-user"></i></span>
+                                    <span>Get User (200 OK)</span>
+                                </button>
+                                <button class="button is-danger" id="get404Btn">
+                                    <span class="icon is-small"><i class="fas fa-exclamation"></i></span>
+                                    <span>Get 404 (Not Found)</span>
+                                </button>
+                                <button class="button is-warning" id="postBtn">
+                                    <span class="icon is-small"><i class="fas fa-paper-plane"></i></span>
+                                    <span>POST Data (201 Created)</span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="box">
+                            <h3 class="title is-4">Slow Request</h3>
+                            <p class="mb-2">This request takes 5 seconds to complete.</p>
+                            <button class="button is-primary" id="slowBtn">Trigger Slow Request</button>
+                        </div>
+                    </div>
+
+                    <div class="column is-6">
+                        <div class="box">
+                            <h3 class="title is-4">Response Output</h3>
+                            <div class="field">
+                                <label class="label">Status: <span id="statusCode"
+                                        class="has-text-grey-light">-</span></label>
+                            </div>
+                            <pre class="json-block" id="jsonOutput">No data...</pre>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </div>
+
+    <footer class="footer has-background-dark has-text-white">
+        <div class="content has-text-centered">
+            <p><strong>QAPlay</strong> by Avantgardian.</p>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/api.js"></script>
+</body>
+
+</html>

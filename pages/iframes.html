@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iFrames - QA Automation Playground</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        iframe {
+            width: 100%;
+            height: 300px;
+            border: 2px solid #dbdbdb;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar is-dark" role="navigation" aria-label="main navigation">
+        <div class="container">
+            <div class="navbar-brand">
+                <a class="navbar-item" href="../index.html">
+                    <span class="icon is-large">
+                        <i class="fas fa-robot fa-lg"></i>
+                    </span>
+                    <span class="has-text-weight-bold is-size-4 ml-2">QAPlay</span>
+                </a>
+            </div>
+            <div class="navbar-menu">
+                <div class="navbar-end">
+                    <a class="navbar-item" href="../index.html">Home</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="content-wrapper">
+        <section class="section">
+            <div class="container">
+                <h1 class="title">iFrames & Windows</h1>
+                <p class="subtitle">Practice switching contexts to interact with elements inside iFrames.</p>
+
+                <div class="columns">
+                    <div class="column is-6">
+                        <div class="box">
+                            <h3 class="title is-4">Simple iFrame</h3>
+                            <p class="mb-2">The button inside this frame changes text when clicked.</p>
+                            <iframe src="frame_content.html" id="frame1" name="frame1"></iframe>
+                        </div>
+                    </div>
+
+                    <div class="column is-6">
+                        <div class="box">
+                            <h3 class="title is-4">Nested iFrame</h3>
+                            <p class="mb-2">Accessing this might require multiple context switches.</p>
+                            <!-- Reusing the same content but logic to pretend it's harder if needed, or nesting frames -->
+                            <iframe src="nested_frame.html" id="frame2" name="frame2"></iframe>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </div>
+
+    <footer class="footer has-background-dark has-text-white">
+        <div class="content has-text-centered">
+            <p><strong>QAPlay</strong> by Avantgardian.</p>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Frame Content</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+</head>
+
+<body style="padding: 2rem; background-color: #f5fafe;">
+    <h1 class="title is-5">I am inside a Frame</h1>
+    <div class="field">
+        <button class="button is-link" id="frameButton" onclick="changeText()">Click Me</button>
+    </div>
+    <p id="msg" class="has-text-success is-hidden">Button Clicked!</p>
+
+    <script>
+        function changeText() {
+            const btn = document.getElementById('frameButton');
+            const msg = document.getElementById('msg');
+            btn.innerText = "Clicked";
+            btn.classList.toggle('is-outlined');
+            msg.classList.remove('is-hidden');
+        }
+    </script>
+</body>
+
+</html>

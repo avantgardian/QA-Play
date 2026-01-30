@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - QA Automation Playground</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+    <nav class="navbar is-dark" role="navigation" aria-label="main navigation">
+        <div class="container">
+            <div class="navbar-brand">
+                <a class="navbar-item" href="../index.html">
+                    <span class="icon is-large">
+                        <i class="fas fa-robot fa-lg"></i>
+                    </span>
+                    <span class="has-text-weight-bold is-size-4 ml-2">QAPlay</span>
+                </a>
+            </div>
+            <div class="navbar-menu">
+                <div class="navbar-end">
+                    <a class="navbar-item" href="../index.html">Home</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="content-wrapper">
+        <section class="section">
+            <div class="container">
+                <div class="columns is-centered">
+                    <div class="column is-6">
+                        <div class="box">
+                            <h3 class="title is-4 has-text-centered">Register</h3>
+                            <form id="registerForm">
+                                <div class="columns">
+                                    <div class="column">
+                                        <div class="field">
+                                            <label class="label">First Name</label>
+                                            <div class="control">
+                                                <input class="input" type="text" id="firstname" name="firstname"
+                                                    required>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="column">
+                                        <div class="field">
+                                            <label class="label">Last Name</label>
+                                            <div class="control">
+                                                <input class="input" type="text" id="lastname" name="lastname" required>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="field">
+                                    <label class="label">Email</label>
+                                    <div class="control has-icons-left">
+                                        <input class="input" type="email" id="email" name="email"
+                                            placeholder="hello@example.com" required>
+                                        <span class="icon is-small is-left">
+                                            <i class="fas fa-envelope"></i>
+                                        </span>
+                                    </div>
+                                </div>
+
+                                <div class="field">
+                                    <label class="label">Date of Birth</label>
+                                    <div class="control has-icons-left">
+                                        <input class="input" type="date" id="dob" name="dob">
+                                        <span class="icon is-small is-left">
+                                            <i class="fas fa-calendar"></i>
+                                        </span>
+                                    </div>
+                                </div>
+
+                                <div class="field">
+                                    <label class="label">Experience Level</label>
+                                    <div class="control">
+                                        <div class="select is-fullwidth">
+                                            <select id="experience" name="experience">
+                                                <option value="junior">Junior</option>
+                                                <option value="mid">Mid-Level</option>
+                                                <option value="senior">Senior</option>
+                                                <option value="lead">Lead/Architect</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="field">
+                                    <label class="label">Skills</label>
+                                    <div class="control">
+                                        <label class="checkbox mr-3">
+                                            <input type="checkbox" name="skills" value="selenium"> Selenium
+                                        </label>
+                                        <label class="checkbox mr-3">
+                                            <input type="checkbox" name="skills" value="playwright"> Playwright
+                                        </label>
+                                        <label class="checkbox">
+                                            <input type="checkbox" name="skills" value="cypress"> Cypress
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="field">
+                                    <div class="control">
+                                        <label class="checkbox">
+                                            <input type="checkbox" id="terms" required>
+                                            I agree to the <a href="#">terms and conditions</a>
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="field">
+                                    <div class="control">
+                                        <button class="button is-success is-fullwidth" type="submit"
+                                            id="registerBtn">Register</button>
+                                    </div>
+                                </div>
+                            </form>
+
+                            <div class="notification is-success is-hidden mt-4" id="registerSuccess">
+                                Registration successful!
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer class="footer has-background-dark has-text-white">
+        <div class="content has-text-centered">
+            <p><strong>QAPlay</strong> by Avantgardian.</p>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/register.js"></script>
+</body>
+
+</html>

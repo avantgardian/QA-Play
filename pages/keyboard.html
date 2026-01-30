@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keyboard & Clipboard - QA Automation Playground</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .key-box {
+            border: 2px solid #333;
+            padding: 5px 10px;
+            border-radius: 4px;
+            background: #eee;
+            font-family: monospace;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar is-dark" role="navigation" aria-label="main navigation">
+        <div class="container">
+            <div class="navbar-brand">
+                <a class="navbar-item" href="../index.html">
+                    <span class="icon is-large">
+                        <i class="fas fa-robot fa-lg"></i>
+                    </span>
+                    <span class="has-text-weight-bold is-size-4 ml-2">QAPlay</span>
+                </a>
+            </div>
+            <div class="navbar-menu">
+                <div class="navbar-end">
+                    <a class="navbar-item" href="../index.html">Home</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="content-wrapper">
+        <section class="section">
+            <div class="container">
+                <h1 class="title">Keyboard & Clipboard</h1>
+                <p class="subtitle">Interact with system clipboard and keyboard shortcuts.</p>
+
+                <div class="columns">
+                    <!-- Keyboard -->
+                    <div class="column is-6">
+                        <div class="box">
+                            <h3 class="title is-4">Keyboard Shortcuts</h3>
+                            <p class="mb-4">Press <span class="key-box">Control</span> + <span class="key-box">K</span>
+                                or <span class="key-box">Cmd</span> + <span class="key-box">K</span> to trigger the
+                                search modal.</p>
+
+                            <div class="field">
+                                <label class="label">Type Here</label>
+                                <div class="control">
+                                    <input class="input" type="text" placeholder="Focus here first..." id="keyInput">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Clipboard -->
+                    <div class="column is-6">
+                        <div class="box">
+                            <h3 class="title is-4">Clipboard</h3>
+                            <div class="field has-addons">
+                                <div class="control is-expanded">
+                                    <input class="input" type="text" value="Copy Me!" id="copyInput" readonly>
+                                </div>
+                                <div class="control">
+                                    <button class="button is-info" id="copyBtn">
+                                        <span class="icon"><i class="fas fa-copy"></i></span>
+                                        <span>Copy</span>
+                                    </button>
+                                </div>
+                            </div>
+                            <p class="help is-success is-hidden" id="copyMsg">Copied to clipboard!</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </div>
+
+    <!-- Hidden Search Modal -->
+    <div class="modal" id="searchModal">
+        <div class="modal-background"></div>
+        <div class="modal-content">
+            <div class="box">
+                <h3 class="title is-4">Search...</h3>
+                <input class="input is-large" type="text" placeholder="Searching for something?">
+            </div>
+        </div>
+        <button class="modal-close is-large" aria-label="close"></button>
+    </div>
+
+    <footer class="footer has-background-dark has-text-white">
+        <div class="content has-text-centered">
+            <p><strong>QAPlay</strong> by Avantgardian.</p>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/keyboard.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scroll - QA Automation Playground</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .scroll-zone {
+            height: 400px;
+            overflow-y: scroll;
+            border: 2px solid #dbdbdb;
+            padding: 1rem;
+            position: relative;
+        }
+
+        .content-box {
+            padding: 2rem;
+            margin-bottom: 1rem;
+            background-color: #f5f5f5;
+            text-align: center;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar is-dark" role="navigation" aria-label="main navigation">
+        <div class="container">
+            <div class="navbar-brand">
+                <a class="navbar-item" href="../index.html">
+                    <span class="icon is-large">
+                        <i class="fas fa-robot fa-lg"></i>
+                    </span>
+                    <span class="has-text-weight-bold is-size-4 ml-2">QAPlay</span>
+                </a>
+            </div>
+            <div class="navbar-menu">
+                <div class="navbar-end">
+                    <a class="navbar-item" href="../index.html">Home</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="content-wrapper">
+        <section class="section">
+            <div class="container">
+                <h1 class="title">Scroll & Lazy Loading</h1>
+                <p class="subtitle">Elements appear or are hidden until you scroll them into view.</p>
+
+                <div class="columns">
+                    <div class="column is-6">
+                        <div class="box">
+                            <h3 class="title is-4">Infinite Scroll</h3>
+                            <div class="scroll-zone" id="scrollZone">
+                                <p class="has-text-grey-light mb-4 text-center">Scroll down to load more...</p>
+                                <!-- Items injected here -->
+                            </div>
+                            <p class="mt-2 text-center" id="itemCount">Items: 0</p>
+                        </div>
+                    </div>
+                    <div class="column is-6">
+                        <div class="box">
+                            <h3 class="title is-4">Target Element</h3>
+                            <p class="mb-4">You have to scroll to find the target button.</p>
+                            <div style="height: 500px; overflow-y:scroll; border: 1px solid #ccc; padding: 10px;"
+                                id="targetContainer">
+                                <div
+                                    style="height: 2000px; background: repeating-linear-gradient(45deg, #f0f0f0, #f0f0f0 10px, #fff 10px, #fff 20px);">
+                                    <p class="has-text-centered pt-6">Scroll down...</p>
+                                </div>
+                                <button class="button is-success is-large is-fullwidth" id="targetBtn">Success! You
+                                    found me!</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </div>
+
+    <footer class="footer has-background-dark has-text-white">
+        <div class="content has-text-centered">
+            <p><strong>QAPlay</strong> by Avantgardian.</p>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/scroll.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shadow DOM - QA Automation Playground</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+    <nav class="navbar is-dark" role="navigation" aria-label="main navigation">
+        <div class="container">
+            <div class="navbar-brand">
+                <a class="navbar-item" href="../index.html">
+                    <span class="icon is-large">
+                        <i class="fas fa-robot fa-lg"></i>
+                    </span>
+                    <span class="has-text-weight-bold is-size-4 ml-2">QAPlay</span>
+                </a>
+            </div>
+            <div class="navbar-menu">
+                <div class="navbar-end">
+                    <a class="navbar-item" href="../index.html">Home</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="content-wrapper">
+        <section class="section">
+            <div class="container">
+                <h1 class="title">Shadow DOM</h1>
+                <p class="subtitle">Elements inside a Shadow Root are hidden from normal DOM queries.</p>
+
+                <div class="columns">
+                    <div class="column is-6">
+                        <div class="box">
+                            <h3 class="title is-4">Shadow Host</h3>
+                            <p class="mb-4">The section below is a "Shadow Host". You cannot access its button with a
+                                standard <code>#shadow-btn</code> selector.</p>
+
+                            <div id="shadow-host"></div>
+
+                        </div>
+                    </div>
+                    <div class="column is-6">
+                        <div class="box">
+                            <h3 class="title is-4">Complex Shadow Host</h3>
+                            <p class="mb-4">Nested shadow roots.</p>
+                            <div id="complex-shadow-host"></div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </div>
+
+    <footer class="footer has-background-dark has-text-white">
+        <div class="content has-text-centered">
+            <p><strong>QAPlay</strong> by Avantgardian.</p>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/shadow.js"></script>
+</body>
+
+</html>

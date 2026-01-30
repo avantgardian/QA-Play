@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alerts & Modals - QA Automation Playground</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+    <nav class="navbar is-dark" role="navigation" aria-label="main navigation">
+        <div class="container">
+            <div class="navbar-brand">
+                <a class="navbar-item" href="../index.html">
+                    <span class="icon is-large">
+                        <i class="fas fa-robot fa-lg"></i>
+                    </span>
+                    <span class="has-text-weight-bold is-size-4 ml-2">QAPlay</span>
+                </a>
+            </div>
+            <div class="navbar-menu">
+                <div class="navbar-end">
+                    <a class="navbar-item" href="../index.html">Home</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="content-wrapper">
+        <section class="section">
+            <div class="container">
+                <h1 class="title">Alerts & Modals</h1>
+                <p class="subtitle">Interact with native browser dialogs and custom HTML modals.</p>
+
+                <div class="columns">
+                    <!-- Native Alerts -->
+                    <div class="column is-6">
+                        <div class="box">
+                            <h3 class="title is-4">Native Browser Alerts</h3>
+                            <div class="buttons">
+                                <button class="button is-warning" id="alertBtn">Show Alert</button>
+                                <button class="button is-info" id="confirmBtn">Show Confirm</button>
+                                <button class="button is-success" id="promptBtn">Show Prompt</button>
+                            </div>
+                            <p class="mt-4">Result: <span id="nativeResult" class="has-text-weight-bold">-</span></p>
+                        </div>
+                    </div>
+
+                    <!-- Custom Modals -->
+                    <div class="column is-6">
+                        <div class="box">
+                            <h3 class="title is-4">Custom Modals</h3>
+                            <button class="button is-primary" id="modalBtn">Launch Modal</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Delayed Alert Section -->
+                <div class="columns">
+                    <div class="column is-6">
+                        <div class="box">
+                            <h3 class="title is-4">Delayed Alert</h3>
+                            <p class="mb-2">Alert will appear after 3 seconds.</p>
+                            <button class="button is-danger" id="delayedAlertBtn">Trigger Delayed Alert</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </div>
+
+    <!-- Modal Markup -->
+    <div class="modal" id="myModal">
+        <div class="modal-background"></div>
+        <div class="modal-card">
+            <header class="modal-card-head">
+                <p class="modal-card-title">Modal Title</p>
+                <button class="delete" aria-label="close"></button>
+            </header>
+            <section class="modal-card-body">
+                <p>This is a custom modal dialog. Automation tools need to interact with DOM elements rather than native
+                    browser windows here.</p>
+            </section>
+            <footer class="modal-card-foot">
+                <button class="button is-success">Save changes</button>
+                <button class="button">Cancel</button>
+            </footer>
+        </div>
+    </div>
+
+    <footer class="footer has-background-dark has-text-white">
+        <div class="content has-text-centered">
+            <p><strong>QAPlay</strong> by Avantgardian.</p>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/alerts.js"></script>
+</body>
+
+</html>
